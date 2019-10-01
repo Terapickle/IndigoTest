@@ -1,0 +1,31 @@
+.quote {
+    margin: 0 0 $text-margin-bottom;
+
+    &--indent {
+        padding: map-get($sizes, 'xs') map-get($sizes, 'xs') map-get($sizes, 'xs') map-get($sizes, 'sm');
+        border-left: 10px solid $gray-lightest;
+    }
+
+    &__icon {
+        width: 44px;
+        margin-bottom: 25px;
+    }
+
+    &__avatar {
+        width: 96px;
+        margin-bottom: 17px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: inline-block !important;
+    }
+
+    &__content {
+        font-weight: 300;
+        font-size: $font-size-base * 2;
+        line-height: ($line-height-base/2) + .5;
+    }
+
+    &__footer {
+        font-weight: 700;
+    }
+}

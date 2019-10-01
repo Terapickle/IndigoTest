@@ -1,0 +1,17 @@
+{
+    "name": "origin/origin-starter-theme",
+    "description": "A flexible starter theme to rapidly speed up development for WordPress.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Origin\\Framework\\": "framework/",
+            "Origin\\Theme\\": "theme/"
+        }
+    },
+    "require": {
+        "indigotree/wp-bootstrap-nav-walker": "^1.0",
+        "doctrine/inflector": "^1.1",
+        "illuminate/container": "~5.3.23",
+        "phpdocumentor/reflection-docblock": "^4.3"
+    }
+}

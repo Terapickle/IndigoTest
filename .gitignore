@@ -1,0 +1,50 @@
+#       Standard GITIGNORE file for an origin-theme, lt-theme & lt-plugin project.
+#       We install GIT in the root of the WP site but then ignore everything except the theme and/or plugin
+#       You can amend as required by adding other plugins or files below.
+#
+#       Please RENAME the theme/plugin names below for your project.
+
+#
+# Ignore everything in the root EXCEPT the "wp-content" directory.
+#
+/*
+!.gitignore
+!wp-content/
+
+
+#
+# Ignore everything in the "wp-content" directory, EXCEPT the "plugins" and "themes" directories.
+#
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
+
+
+#
+# Ignore everything in the "plugins" directory, EXCEPT the plugins you specify
+#
+wp-content/plugins/*
+#!wp-content/plugins/ltplugin.php
+#!wp-content/plugins/lt-directory-plugin/
+#!wp-content/plugins/lt-directory-plugin/*
+
+
+#
+# Ignore everything in the "themes" directory, EXCEPT the themes you specify
+#
+wp-content/themes/*
+!wp-content/themes/origin-theme/
+!wp-content/themes/origin-theme/*
+wp-content/themes/origin-theme/node_modules/
+
+
+
+
+
+
+
+#
+# Override all rules to force removal of .DS_Store files - MUST BE THE LAST RULE :D
+#
+.DS_Store
+yarn.lock
