@@ -1,0 +1,31 @@
+.column {
+    min-height: 1px;
+    width: 100%;
+    padding-left: $grid-gutter-width/2;
+    padding-right: $grid-gutter-width/2;
+}
+
+@each $key, $breakpoint in $grid-breakpoints {
+    @media (min-width: $breakpoint) {
+        $selector: ".column--#{$key}-auto, ";
+        @for $i from 1 through $grid-columns {
+            $selector: "#{$selector}" + ".column--#{$key}-#{$i}, ";
+        }
+        #{$selector} {
+            flex: 0 0 auto;
+        }
+        .column--#{$key}-auto {
+            flex-grow: 1;
+            width: auto;
+        }
+        @for $i from 1 through $grid-columns {
+            .column--#{$key}-#{$i} {
+                flex-basis: percentage($i / $grid-columns);
+                max-width: percentage($i / $grid-columns);
+            }
+            .column--#{$key}-offset-#{$i} {
+                margin-left: percentage($i / $grid-columns);
+            }
+        }
+    }
+}

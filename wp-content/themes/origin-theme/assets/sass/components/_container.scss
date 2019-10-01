@@ -1,0 +1,12 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $grid-gutter-width/2;
+    padding-right: $grid-gutter-width/2;
+
+    @each $key, $breakpoint in $grid-breakpoints {
+        @media (min-width: $breakpoint) {
+            width: map-get($grid-containers, $key);
+        }
+    }
+}

@@ -1,0 +1,14 @@
+# IDE
+/.idea
+/.vscode
+
+# Built Assets
+/assets/dist
+/vendor
+
+# Task Runners & Compilers
+/node_modules
+
+# OS
+.DS_Store
+Thumbs.db

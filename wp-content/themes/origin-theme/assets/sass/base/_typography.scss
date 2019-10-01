@@ -1,0 +1,119 @@
+svg:not([fill]) {
+    fill: currentColor;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    margin: $text-margin-bottom 0;
+    border-top: 1px solid $gray-lighter;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, table {
+    margin-top: 0;
+    margin-bottom: $text-margin-bottom;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+}
+
+h1 {
+    font-size: $font-size-h1;
+}
+h2 {
+    font-size: $font-size-h2;
+}
+h3 {
+    font-size: $font-size-h3;
+}
+h4 {
+    font-size: $font-size-h4;
+}
+h5 {
+    font-size: $font-size-h5;
+}
+h6 {
+    font-size: $font-size-h6;
+}
+
+p {
+    & + h1, & + h2, & + h3, & + h4, & + h5, & + h6 {
+        margin-top: $text-margin-bottom * 2;
+    }
+}
+
+a {
+    color: $link-color;
+    
+    &:hover, &:focus {
+        color: $link-hover-color;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid $gray-lightest;
+    width: 100%;
+
+    thead {
+        th {
+            border: 1px solid $gray-lightest;
+            border-bottom-width: 2px;
+        }
+    }
+
+    tbody {
+        th {
+            font-weight: bold;
+        }
+        td, th {
+            border: 1px solid $gray-lightest;
+        }
+    }
+    th, td {
+        padding: 8px 12px;
+        vertical-align: top;
+        text-align: left;
+    }
+}
+
+figure {
+    margin: 0 0 $text-margin-bottom 0;
+}
+
+.lead {
+    font-size: 120%;
+    font-weight: 500;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto $text-margin-bottom auto;
+}
+
+.alignleft, .alignright {
+    margin: 0 0 $text-margin-bottom 0;
+    display: block;
+}
+
+.alignleft {
+    @media screen and (min-width: get-breakpoint-min(sm)) {
+        margin-right: $text-margin-bottom;
+        float: left;
+        max-width: 50%;
+    }
+}
+
+.alignright {
+    @media screen and (min-width: get-breakpoint-min(sm)) {
+        margin-left: $text-margin-bottom;
+        float: right;
+        max-width: 50%;
+    }
+}

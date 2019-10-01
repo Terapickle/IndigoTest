@@ -1,0 +1,34 @@
+.form {
+    &--inline {
+        display: flex;
+    }
+    &__group {
+        margin-bottom: $text-margin-bottom;
+    }
+    &__label {
+        display: inline-block;
+    }
+}
+
+.input {
+    &--text, &--textarea {
+        border: 1px solid $gray-lighter;
+        background-color: $white;
+        display: block;
+        width: 100%;
+        padding: 10px 12px;
+        color: $gray-darker;
+    }
+
+    &--text {
+        height: 40px;
+    }
+
+    &--textarea {
+        height: 160px;
+    }
+
+    &::placeholder {
+        color: $gray-light;
+    }
+}
