@@ -27,7 +27,7 @@
     "yargs": "^12.0.2"
   },
   "dependencies": {
-    "acorn": "^7.0.0",
+    "acorn": "^7.1.1",
     "normalize.css": "^8.0.0"
   },
   "scripts": {
